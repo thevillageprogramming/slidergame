@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/thevillageprogramming/slidergame#readme",
   "dependencies": {
+    "canvas": "^1.6.7",
     "cheerio": "^1.0.0-rc.2",
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "p5": "^0.5.16",
+    "socket.io": "^2.0.4",
     "util": "^0.10.3"
   }
 }

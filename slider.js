@@ -2,15 +2,37 @@ const util = require("util");
 const cheerio = require("cheerio");
 const http = require("http");
 const fs = require("fs");
-var website = "";
+const app = require('http').createServer(handler);
+const io = require("socket.io")(app);
 
-fs.readFile("./website.html", "utf8", function(err, websitedata){
-	if(err){
-		console.log("Websitefile not found");
-	}
-	website = websitedata;
-	//console.log(websitedata);
+//const { createCanvas, loadImage } = require('canvas');
+//const canvas = createCanvas(16, 16);
+//const ctx = canvas.getContext('2d');
 
+var characterstate = [0,1,2,3,4];
+
+console.log(util.inspect(characterstate,false,null));
+
+app.listen(8000);
+
+function handler(req, res){
+	fs.readFile(__dirname +"/website.html",
+	function (err, data) {
+		if (err) {
+			res.writeHead(500);
+			return res.end('Error loading index.html');
+		}
+
+		res.writeHead(200);
+		res.end(data);
+	});
+}
+
+io.on('connection', function (socket) {
+	socket.emit('news', { hello: 'world' });
+	socket.on('my other event', function (data) {
+		console.log(data);
+	});
 });
 
 http.createServer(function(request, response){

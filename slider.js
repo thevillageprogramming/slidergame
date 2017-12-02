@@ -10,6 +10,16 @@ const io = require("socket.io")(app);
 //const ctx = canvas.getContext('2d');
 
 var characterstate = [0,1,2,3,4];
+var currentstate = 0;
+
+//state 0 = nothing
+//state 1 = ground level
+//state 2 = slowed
+//state 3 = jump
+//state 4 = speed up
+
+var currentspeed = 1;
+//speed 0 = stopped speed 1 = normal speed speed 2 = speedbuff
 
 console.log(util.inspect(characterstate,false,null));
 

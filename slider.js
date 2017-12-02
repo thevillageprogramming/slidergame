@@ -18,3 +18,12 @@ http.createServer(function(request, response){
 	response.write(website);
 	response.end();
 }).listen(8000);
+
+function vector2D (x_, y_) { //vectors
+	let x = x_;
+	let y = y_;
+}
+
+function player (){ //constructor function
+	let position = vector2D ()
+}

@@ -42,10 +42,19 @@ http.createServer(function(request, response){
 }).listen(8000);
 
 function vector2D (x_, y_) { //vectors
-	let x = x_;
-	let y = y_;
+	this.x = x_;
+	this.y = y_;
 }
 
 function player (){ //constructor function
-	let position = vector2D ()
+	this.position = vector2D (16*2, 0);
+	this.velocity = vector2D (0, 0);
+	this.acceleration = vector2D (0, -1);
+	this.state = 0;
+	this.update = function() {
+
+	}
+	this.applyState = function () {
+		
+	}
 }

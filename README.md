@@ -1,1 +1,2 @@
 # slidergame
+<code> npm install

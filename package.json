@@ -1,0 +1,28 @@
+{
+  "name": "slidergame",
+  "version": "1.0.0",
+  "description": "a little slidergame",
+  "main": "slider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thevillageprogramming/slidergame.git"
+  },
+  "keywords": [
+    "slider",
+    "game",
+    "javascript"
+  ],
+  "author": "thewildbear Chaosdrachin MaximilianJugendForscht",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thevillageprogramming/slidergame/issues"
+  },
+  "homepage": "https://github.com/thevillageprogramming/slidergame#readme",
+  "dependencies": {
+    "p5": "^0.5.16",
+    "util": "^0.10.3"
+  }
+}
